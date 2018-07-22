@@ -15,6 +15,18 @@ const menuView = {
     }
 }
 
+
+const catView = {
+    loadCat: function (cat) {
+        const card = document.getElementsByClassName('card');
+        card[0].innerHTML = `<div class="counter-container">
+	    				    <h3 class="cat-name">${cat.name}</h3>
+	    				    <h2 id="counter" class="counter">${cat.count}</h2>
+	    			    </div>
+                        <img id="cat" class="cat" src="${cat.src}">`;
+    }
+}
+
 const octopus = {
     createMenu: function() {
         let index = 0;
@@ -25,6 +37,13 @@ const octopus = {
     },
     createCat: function(cat) {
         catView.loadCat(cat);
+        const catImage = document.getElementById('cat');
+        const counter = document.getElementById('counter');
+
+        catImage.addEventListener('click', function () {
+            cat.count++;
+            counter.innerHTML = cat.count;
+        }, false);
     },
     changeCatListener: function() {
         const menuButtons = document.getElementsByClassName('btn');
@@ -39,24 +58,6 @@ const octopus = {
         this.createMenu();
         this.createCat(catsModel[0]);
         this.changeCatListener();
-    }
-}
-
-const catView = {
-    loadCat: function(cat) {
-        const card = document.getElementsByClassName('card');
-        card[0].innerHTML = `<div class="counter-container">
-	    				    <h3 class="cat-name">${cat.name}</h3>
-	    				    <h2 id="counter" class="counter">${cat.count}</h2>
-	    			    </div>
-                        <img id="cat" class="cat" src="${cat.src}">`;
-        const catImage = document.getElementById('cat');
-        const counter = document.getElementById('counter');
-
-        catImage.addEventListener('click', function () {
-            cat.count++;
-            counter.innerHTML = cat.count;
-        }, false);
     }
 }
 
