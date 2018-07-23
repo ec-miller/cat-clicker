@@ -110,7 +110,8 @@ textarea {
 }
 
 .flex-container {
-	display: flex;
+    display: flex;
+    flex-wrap: wrap;
 	margin: auto;
 	margin-top: 3em;
 	max-width: 900px;
@@ -125,6 +126,71 @@ textarea {
 	padding-bottom: 3em;
 }
 
+.card {
+	display: block;
+	width: 80%;
+	background-color: turquoise;
+	padding-bottom: 3em;
+}
+
+.counter-container {
+	/* margin-top: 1em; */
+}
+
+.cat-name {
+	text-align: center;
+}
+
+.counter {
+	font-size: 40pt;
+	margin: 0;
+	text-align: center;
+}
+
+.cat {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 1em;
+	width: 80%;
+	height: auto;
+	transition: all .2s ease-in-out;
+}
+
+.cat:hover {
+	transform: scale(1.05);
+}
+
+.cat:active {
+	transform: scale(0.95);
+}
+
+.admin-area {
+    width: 100%;
+    background-color: slategrey;
+    align-items: center;
+    text-align: center;
+}
+
+.admin {
+    
+}
+
+label {
+    color: white;
+}
+
+.invisible {
+  visibility: hidden !important;
+}
+
+.footer {
+	height: 5em;
+}
+
+
+
+/* Bootstrap buttons */
 .btn {
   display: block;
   margin-left: 0.5em;
@@ -170,62 +236,38 @@ textarea {
   box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.5);
 }
 
-.card {
-	display: block;
-	width: 80%;
-	background-color: turquoise;
-	padding-bottom: 3em;
+
+.btn-info {
+  color: #fff;
+  background-color: #17a2b8;
+  border-color: #17a2b8;
 }
 
-.counter-container {
-	/* margin-top: 1em; */
+.btn-info:hover {
+  color: #fff;
+  background-color: #138496;
+  border-color: #117a8b;
 }
 
-.cat-name {
-	text-align: center;
+.btn-info:focus, .btn-info.focus {
+  box-shadow: 0 0 0 0.2rem rgba(23, 162, 184, 0.5);
 }
 
-.counter {
-	font-size: 40pt;
-	margin: 0;
-	text-align: center;
+.btn-outline-light {
+  color: #f8f9fa;
+  background-color: transparent;
+  background-image: none;
+  border-color: #f8f9fa;
 }
 
-.cat {
-	display: block;
-	margin-left: auto;
-	margin-right: auto;
-	margin-top: 1em;
-	width: 80%;
-	height: auto;
-	transition: all .2s ease-in-out;
+.btn-outline-light:hover {
+  color: #212529;
+  background-color: #f8f9fa;
+  border-color: #f8f9fa;
 }
 
-.cat:hover {
-	transform: scale(1.05);
-}
-
-.cat:active {
-	transform: scale(0.95);
-}
-
-.footer {
-	height: 5em;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.btn-outline-light:focus, .btn-outline-light.focus {
+  box-shadow: 0 0 0 0.2rem rgba(248, 249, 250, 0.5);
 
 
 
