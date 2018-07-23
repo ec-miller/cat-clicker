@@ -112,6 +112,7 @@ const octopus = {
             octopus.createMenu();
             octopus.changeCatListener();
             octopus.createCat(currentCat);
+            octopus.toggleAdmin();
         });
 
         const cancel = document.getElementById('cancel');
