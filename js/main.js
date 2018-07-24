@@ -80,7 +80,10 @@ const octopus = {
         for (menuButton of menuButtons) {
             menuButton.addEventListener('click', function () {
                 octopus.createCat(catsModel[this.id]);
-                adminView.renderAdmin();
+                const adminForm = document.getElementById("admin-form");
+                if (adminForm.innerHTML) {
+                    adminView.renderAdmin();
+                }
             });
         }
     },
